@@ -1,0 +1,60 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:MalfunctionningPreview.Controls">
+
+  <!-- Should be able to preview this TemplatedCOntrol with just this much, but extension is currently stuck with the 'Build Project' button greyed out -->
+  <Design.PreviewWith>
+    <Grid>
+      <controls:Tile TileName="Tile" Description="This is a tile, with a tooltip!" Width="264" Height="264" />
+    </Grid>
+  </Design.PreviewWith>
+
+  <Style Selector="controls|Tile /template/ Border">
+    <Setter Property="BorderBrush" Value="{StaticResource BorderColorBrush}" />
+    <Setter Property="Background" Value="{StaticResource AccentColorBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+    <Setter Property="CornerRadius" Value="5" />
+    <Setter Property="Padding" Value="0" />
+  </Style>
+
+  <Style Selector="controls|Tile /template/ Button">
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+    <Setter Property="VerticalAlignment" Value="Stretch" />
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="CornerRadius" Value="0" />
+    <Setter Property="Padding" Value="8,32,8,6" />
+  </Style>
+
+  <Style Selector="controls|Tile /template/ Button > ContentPresenter">
+    <Setter Property="Padding" Value="0" />
+  </Style>
+
+  <Style Selector="controls|Tile /template/ Image">
+    <Setter Property="Margin" Value="4, 4, 4, 8" />
+  </Style>
+
+
+  <Style Selector="controls|Tile /template/ TextBlock">
+    <Setter Property="FontSize" Value="24" />
+    <Setter Property="Foreground" Value="{StaticResource TextColorBrush}" />
+    <Setter Property="TextAlignment" Value="Center" />
+  </Style>
+    
+  <Style Selector="controls|Tile">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Border Name="TileBorder" ToolTip.Tip="{TemplateBinding Description}">
+            <Button Command="{TemplateBinding Command}">
+              <Grid RowDefinitions="*, Auto">
+                <Image Source="{TemplateBinding Icon}" Grid.Row="0" />
+                <TextBlock Text="{TemplateBinding TileName}" Grid.Row="1" />
+              </Grid>
+            </Button>
+          </Border>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+
+</Styles>

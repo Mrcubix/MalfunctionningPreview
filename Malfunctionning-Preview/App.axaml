@@ -1,0 +1,24 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:MalfunctionningPreview"
+             x:Class="MalfunctionningPreview.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+
+    <Application.Resources>
+        <SolidColorBrush x:Key="AccentColorBrush" Color="#272727" />
+        <SolidColorBrush x:Key="BorderColorBrush" Color="#1C1C1C" />
+        <SolidColorBrush x:Key="BodyColorBrush" Color="#343434" />
+        <SolidColorBrush x:Key="TextColorBrush" Color="#9F9F9F" />
+    </Application.Resources>
+
+    <Application.Styles>
+        <FluentTheme />
+
+        <StyleInclude Source="/Controls/Tile.axaml"/>
+    </Application.Styles>
+</Application>

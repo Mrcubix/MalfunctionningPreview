@@ -1,0 +1,18 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:MalfunctionningPreview.ViewModels"
+             xmlns:controls="clr-namespace:MalfunctionningPreview.Controls"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="MalfunctionningPreview.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <vm:MainViewModel />
+  </Design.DataContext>
+
+  <!-- Should be able to preview this view with just this much, but extension currently render nothing -->
+  <Grid>
+    <controls:Tile TileName="Tile in view" Description="This is a tile contained within a view, with a tooltip!" Width="264" Height="264" />
+  </Grid>
+</UserControl>

@@ -1,0 +1,45 @@
+2023-10-26 10:45:28.978 [info] Previewer process started with args: exec,--runtimeconfig "c:\Users\tinta\Documents\Repo\C#\Avalonia\Examples\Issues\Extension\MalfunctionningPreview\Malfunctionning-Preview.Desktop\bin\Debug\net7.0\Malfunctionning-Preview.Desktop.runtimeconfig.json",--depsfile "c:\Users\tinta\Documents\Repo\C#\Avalonia\Examples\Issues\Extension\MalfunctionningPreview\Malfunctionning-Preview.Desktop\bin\Debug\net7.0\Malfunctionning-Preview.Desktop.deps.json" "C:\Users\tinta\.nuget\packages\avalonia\11.0.2\tools\netcoreapp2.0\designer\Avalonia.Designer.HostApp.dll",--method avalonia-remote,--transport tcp-bson://127.0.0.1:8001/,--method html,--html-url http://127.0.0.1:8000,"c:\Users\tinta\Documents\Repo\C#\Avalonia\Examples\Issues\Extension\MalfunctionningPreview\Malfunctionning-Preview.Desktop\bin\Debug\net7.0\Malfunctionning-Preview.Desktop.dll"
+2023-10-26 10:45:28.978 [info] Preview server listening on port 8001
+2023-10-26 10:45:28.980 [info] Show Preview to side: file:///c%3A/Users/tinta/Documents/Repo/C%23/Avalonia/Examples/Issues/Extension/MalfunctionningPreview/Malfunctionning-Preview/Views/MainView.axaml
+2023-10-26 10:45:29.071 [info] Preview server connected on port 8001
+2023-10-26 10:45:29.078 [info] Obtaining AppBuilder instance from MalfunctionningPreview.Desktop.Program
+
+2023-10-26 10:45:29.109 [info] Initializing application in design mode
+
+2023-10-26 10:45:29.133 [info] {"Uri":"http://127.0.0.1:8000/"}
+2023-10-26 10:45:29.303 [info] Sending StartDesignerSessionMessage
+
+2023-10-26 10:45:29.304 [info] {"SessionId":"4935f657-3c2e-4802-97d9-eef397d4d298"}
+2023-10-26 10:45:29.304 [info] Start designer session message received.
+2023-10-26 10:45:30.296 [info] System.IO.EndOfStreamException: Attempted to read past the end of the stream.
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.ReadExact(Stream from, Byte[] to, Int32 offset, Int32 length)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.ReadFrame()
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.ReceiveMessage()
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.HtmlWebSocketTransport.SocketReceiveWorker(SimpleWebSocket socket)
+
+2023-10-26 10:45:30.432 [info] {"Error":null,"Handle":null,"Exception":null}
+2023-10-26 10:45:30.463 [info] System.IO.IOException: Unable to write data to the transport connection: Une connexion �tablie a �t� abandonn�e par un logiciel de votre ordinateur h�te..
+ ---> System.Net.Sockets.SocketException (10053): Une connexion �tablie a �t� abandonn�e par un logiciel de votre ordinateur h�te.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.CreateException(SocketError error, Boolean forAsyncThrow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.SendAsyncForNetworkStream(Socket socket, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.SendAsyncForNetworkStream(ReadOnlyMemory`1 buffer, SocketFlags socketFlags, CancellationToken cancellationToken)
+   at System.Net.Sockets.NetworkStream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count, CancellationToken cancellationToken)
+   at System.IO.Stream.WriteAsync(Byte[] buffer, Int32 offset, Int32 count)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.SendFrame(FrameType type, Byte[] data, Int32 offset, Int32 length)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.SendFrame(FrameType type, Byte[] data, Int32 offset, Int32 length)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.SendMessage(Boolean isText, Byte[] data, Int32 offset, Int32 length)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.SendMessage(Boolean isText, Byte[] data)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.SendMessage(String text)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.HtmlWebSocketTransport.SocketWorker()
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.HtmlWebSocketTransport.SocketWorker()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+--- End of stack trace from previous location ---
+
+   --- End of inner exception stack trace ---
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.SimpleWebSocket.SendFrame(FrameType type, Byte[] data, Int32 offset, Int32 length)
+   at Avalonia.DesignerSupport.Remote.HtmlTransport.HtmlWebSocketTransport.SocketWorker()
