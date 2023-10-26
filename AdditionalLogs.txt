@@ -18,8 +18,8 @@
    at Avalonia.DesignerSupport.Remote.HtmlTransport.HtmlWebSocketTransport.SocketReceiveWorker(SimpleWebSocket socket)
 
 2023-10-26 10:45:30.432 [info] {"Error":null,"Handle":null,"Exception":null}
-2023-10-26 10:45:30.463 [info] System.IO.IOException: Unable to write data to the transport connection: Une connexion �tablie a �t� abandonn�e par un logiciel de votre ordinateur h�te..
- ---> System.Net.Sockets.SocketException (10053): Une connexion �tablie a �t� abandonn�e par un logiciel de votre ordinateur h�te.
+2023-10-26 10:45:30.463 [info] System.IO.IOException: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine..
+ ---> System.Net.Sockets.SocketException (10053): An established connection was aborted by the software in your host machine.
    at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.CreateException(SocketError error, Boolean forAsyncThrow)
    at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.SendAsyncForNetworkStream(Socket socket, CancellationToken cancellationToken)
    at System.Net.Sockets.Socket.SendAsyncForNetworkStream(ReadOnlyMemory`1 buffer, SocketFlags socketFlags, CancellationToken cancellationToken)
