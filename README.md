@@ -8,8 +8,12 @@ Additional log when previewing a view for the first time after opening vscode ca
 
 ## What the view look like (dotnet run)
 
-![image](./images/View.png)
+<p align="center">
+<img src="./images/View.png" alt="image" />
+</p>
 
 ## What the TemplatedControl look like (dotnet run)
 
-![image](./images/TemplatedControl.png)
+<p align="center">
+  <img src="./images/TemplatedControl.png" alt="image" />
+</p>
